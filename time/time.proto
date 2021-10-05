@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option go_package = "example.com/helloworld";
+
+import "google/protobuf/empty.proto";
+
+service getCurrentTime {
+    rpc getTime (google.protobuf.Empty) returns (GetTimeReply) {}
+}
+
+message GetTimeReply {
+    string reply = 1;
+}
