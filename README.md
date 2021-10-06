@@ -4,6 +4,7 @@
 
     ``$ go mod init [link to repo]``
 
+    your repo should be on the public github. i couldn't get it to work on the itu instance.
 2. make a ``.proto`` file in a subfolder, for example ``time/time.proto``.
 3. run command:
 
