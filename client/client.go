@@ -35,5 +35,5 @@ func SendGetTimeRequest(c time.GetCurrentTimeClient) {
 		log.Fatalf("Error when calling GetCourse: %s", err)
 	}
 
-	fmt.Printf("Response from the Server: %s\n", response.Reply)
+	fmt.Printf("Current time right now: %s\n", response.Reply)
 }
