@@ -32,7 +32,8 @@
     this will run the requests listed in the ``main`` method of the ``client`` file.
 12. create a ``Dockerfile`` like the one in this repository.
 13. change line 11, 12 and 16 to match your repository.
-14. from now on: please remember to commit and push changes to the files in your repository before running the program.
+    > ***from now on***
+    > please remember to commit and push changes to the files in your repository before running the program.
     > the following docker commands will clone your repository (maybe to the virtual machine?), so changes to files will not be applied, if you don't git commit yeet before.
     > the only exception (i think) is changes to the ``client.go`` file, since it's run locally on your computer, but just connects to the server in docker.
 15. run command:
