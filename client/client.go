@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log"
 
-	"time/time"
+	"github.com/NaddiNadja/grpc101/time"
 
 	"google.golang.org/grpc"
 )

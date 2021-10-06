@@ -6,7 +6,8 @@ import (
 	"log"
 	"net"
 	t "time"
-	"time/time"
+
+	"github.com/NaddiNadja/grpc101/time"
 
 	"google.golang.org/grpc"
 )
