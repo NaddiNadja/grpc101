@@ -5,15 +5,17 @@ import (
 	"fmt"
 	"log"
 
+	t "time"
+
 	"github.com/NaddiNadja/grpc101/time"
 
 	"google.golang.org/grpc"
 )
 
 func main() {
-	// Creat a virtual RPC Client Connection on port  8008 WithInsecure (because  of http)
+	// Creat a virtual RPC Client Connection on port  8080 WithInsecure (because  of http)
 	var conn *grpc.ClientConn
-	conn, err := grpc.Dial(":8008", grpc.WithInsecure())
+	conn, err := grpc.Dial(":8080", grpc.WithInsecure())
 	if err != nil {
 		log.Fatalf("Could not connect: %s", err)
 	}
@@ -23,7 +25,11 @@ func main() {
 
 	//  Create new Client from generated gRPC code from proto
 	c := time.NewGetCurrentTimeClient(conn)
-	SendGetTimeRequest(c)
+
+	for {
+		SendGetTimeRequest(c)
+		t.Sleep(5 * t.Second)
+	}
 }
 
 func SendGetTimeRequest(c time.GetCurrentTimeClient) {
@@ -32,8 +38,8 @@ func SendGetTimeRequest(c time.GetCurrentTimeClient) {
 
 	response, err := c.GetTime(context.Background(), &message)
 	if err != nil {
-		log.Fatalf("Error when calling GetCourse: %s", err)
+		log.Fatalf("Error when calling GetTime: %s", err)
 	}
 
-	fmt.Printf("Current time right now: %s\n", response.Reply)
+	fmt.Printf("Current time right now: %s\n", response)
 }

@@ -22,10 +22,10 @@ func (s *Server) GetTime(ctx context.Context, in *time.GetTimeRequest) (*time.Ge
 }
 
 func main() {
-	// Create listener tcp on port 8008
-	list, err := net.Listen("tcp", ":8008")
+	// Create listener tcp on port 8080
+	list, err := net.Listen("tcp", ":8080")
 	if err != nil {
-		log.Fatalf("Failed to listen on port 8008: %v", err)
+		log.Fatalf("Failed to listen on port 8080: %v", err)
 	}
 	grpcServer := grpc.NewServer()
 	time.RegisterGetCurrentTimeServer(grpcServer, &Server{})

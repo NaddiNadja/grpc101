@@ -2,7 +2,7 @@
 
 1. make ``go.mod`` file with:
 
-    ``$ go mod init``
+    ``$ go mod init [link to repo]``
 
 2. make a ``.proto`` file in a subfolder, for example ``time/time.proto``.
 3. run command:
@@ -30,3 +30,21 @@
     ``$ go run .``
 
     this will run the requests listed in the ``main`` method of the ``client`` file.
+12. create a ``Dockerfile`` like the one in this repository.
+13. change line 11, 12 and 16 to match your repository.
+14. run command:
+
+    ``docker build -t test .``
+
+    to build the code.
+15. run command:
+
+    ``docker run -p 8080:8080 -tid test``
+
+    to run the code in a docker container.
+16. change directory into your ``client`` folder.
+17. run command:
+
+    ``go run .``
+
+    to run the code.
