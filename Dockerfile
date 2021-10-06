@@ -11,6 +11,6 @@ COPY go.sum /build/
 RUN cd /build/ && git clone https://github.com/NaddiNadja/grpc101.git
 RUN cd /build/grpc101/server && go build ./...
 
-EXPOSE 8080
+EXPOSE 9080
 
 ENTRYPOINT [ "/build/grpc101/server/server" ]
