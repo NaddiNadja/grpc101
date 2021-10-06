@@ -27,6 +27,6 @@
     this will start your server.
 11. open a new terminal, change directory to the ``client`` folder and run the command:
 
-    ``$ go run.``
+    ``$ go run .``
 
-    this will run the requests listed in the ``main`` method.
+    this will run the requests listed in the ``main`` method of the ``client`` file.
