@@ -26,8 +26,10 @@ func main() {
 	//  Create new Client from generated gRPC code from proto
 	c := time.NewGetCurrentTimeClient(conn)
 
-	SendGetTimeRequest(c)
-	t.Sleep(5 * t.Second)
+	for {
+		SendGetTimeRequest(c)
+		t.Sleep(5 * t.Second)
+	}
 }
 
 func SendGetTimeRequest(c time.GetCurrentTimeClient) {
@@ -39,5 +41,5 @@ func SendGetTimeRequest(c time.GetCurrentTimeClient) {
 		log.Fatalf("Error when calling GetTime: %s", err)
 	}
 
-	fmt.Printf("Current time right now: %s\n", response)
+	fmt.Printf("Current time right now: %s\n", response.Reply)
 }
