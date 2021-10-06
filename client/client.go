@@ -13,9 +13,9 @@ import (
 )
 
 func main() {
-	// Creat a virtual RPC Client Connection on port  8080 WithInsecure (because  of http)
+	// Creat a virtual RPC Client Connection on port  9080 WithInsecure (because  of http)
 	var conn *grpc.ClientConn
-	conn, err := grpc.Dial(":8080", grpc.WithInsecure())
+	conn, err := grpc.Dial(":9080", grpc.WithInsecure())
 	if err != nil {
 		log.Fatalf("Could not connect: %s", err)
 	}

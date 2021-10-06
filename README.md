@@ -39,7 +39,7 @@
     to build the code.
 15. run command:
 
-    ``docker run -p 8080:8080 -tid test``
+    ``docker run -p 9080:9080 -tid test``
 
     to run the code in a docker container.
 16. change directory into your ``client`` folder.
