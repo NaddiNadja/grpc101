@@ -1,0 +1,35 @@
+package main
+
+import (
+	"context"
+	"fmt"
+	"log"
+	"net"
+	t "time"
+	"myFolder/myPackage"
+
+	"google.golang.org/grpc"
+)
+
+type Server struct {
+	myPackage.UnimplementedGetXXXServer
+}
+
+func (s *Server) GetTime(ctx context.Context, in *myPackage.GetXXXRequest) (*myPackage.GetXXXReply, error) {
+	fmt.Printf("Received XXX request")
+	return &myPackage.GetXXXReply{Reply: "Your reply here"}, nil
+}
+
+func main() {
+	// Create listener tcp on port 8008
+	list, err := net.Listen("tcp", ":8008")
+	if err != nil {
+		log.Fatalf("Failed to listen on port 8008: %v", err)
+	}
+	grpcServer := grpc.NewServer()
+	myPackage.RegisterXXXServer(grpcServer, &Server{})
+
+	if err := grpcServer.Serve(list); err != nil {
+		log.Fatalf("failed to server %v", err)
+	}
+}

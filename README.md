@@ -15,3 +15,8 @@
     ``$ go mod tidy``
 
     to install dependencies and create the ``go.sum`` file.
+5. create a ``client\client.go`` file with the ``client_template.txt`` as template.
+6. create a ``server\server.go`` file with the ``server_template.txt`` as template.
+7. Switch out the "myPackage" with your actual package.
+8. Switch our the method names with actual method names.
+9. Add more methods to the ``client.go`` file, so that there's a method for each request in the ``.proto`` file.
