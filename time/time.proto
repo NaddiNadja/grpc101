@@ -1,12 +1,14 @@
 syntax = "proto3";
 
-option go_package = "example.com/helloworld";
+package time;
+option go_package = "https://github.itu.dk/nako/DISYS-week5;time";
 
-import "google/protobuf/empty.proto";
 
 service getCurrentTime {
-    rpc getTime (google.protobuf.Empty) returns (GetTimeReply) {}
+    rpc getTime (GetTimeRequest) returns (GetTimeReply) {}
 }
+
+message GetTimeRequest {}
 
 message GetTimeReply {
     string reply = 1;
