@@ -1,18 +1,6 @@
 # gRPC 101
 
-## Prerequisites
-
-1. before starting, install Google's Protocol Buffers:
-    - go to this link: <https://developers.google.com/protocol-buffers/docs/downloads>
-    - Click on the "release page" link.
-    - find the version you need and download it.
-    - as per october 2021, if your on windows, it's the third from the bottom, ``protoc-3.18.1-win64.zip``.
-2. unzip the downloaded file somewhere "safe"
-    - on my windows machine, i placed it in ``C:\Program Files\Protoc``
-3. open a terminal and run these commands:
-
-    ``$ go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.26``
-    ``$ go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.1``
+if you haven't installed google's protocol buffers, see the prerequisites part at the bottom.
 
 ## Setup of repository
 
@@ -72,3 +60,24 @@
     ``go run .``
 
     to run the code.
+
+## Prerequisites
+
+1. before starting, install google's Protocol Buffers:
+    - go to this link: <https://developers.google.com/protocol-buffers/docs/downloads>
+    - Click on the "release page" link.
+    - find the version you need and download it.
+    - as per october 2021, if your on windows, it's the third from the bottom, ``protoc-3.18.1-win64.zip``.
+2. unzip the downloaded file somewhere "safe".
+    - on my windows machine, i placed it in ``C:\Program Files\Protoc``
+3. add the path to the ``bin`` folder to your system variables.
+    - on windows, click the windows key and search for "system", then there should come something up like "edit the system environment variables".
+    - click the button "environment variables..." at the bottom.
+    - in the bottom list select the variable called "path" and click "edit ..."
+    - in the pop-up window, click "new..."
+    - paste the total path to the ``bin`` folder into the text field. my path is ``C:\Program Files\Protoc\bin``.
+    - click "ok".
+4. open a terminal and run these commands:
+
+    ``$ go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.26``
+    ``$ go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.1``
