@@ -65,7 +65,7 @@ if you haven't installed google's protocol buffers, see the prerequisites part a
 
 1. before starting, install google's protocol buffers:
     - go to this link: <https://developers.google.com/protocol-buffers/docs/downloads>
-    - Click on the "release page" link.
+    - click on the "release page" link.
     - find the version you need and download it.
     - as per october 2021, if your on windows, it's the third from the bottom, ``protoc-3.18.1-win64.zip``.
 2. unzip the downloaded file somewhere "safe".
@@ -75,9 +75,11 @@ if you haven't installed google's protocol buffers, see the prerequisites part a
     - click the button "environment variables..." at the bottom.
     - in the bottom list select the variable called "path" and click "edit ..."
     - in the pop-up window, click "new..."
-    - paste the total path to the ``bin`` folder into the text field. my path is ``C:\Program Files\Protoc\bin``.
+    - paste the total path to the ``bin`` folder into the text field. 
+        my path is ``C:\Program Files\Protoc\bin``.
     - click "ok".
 4. open a terminal and run these commands:
 
     ``$ go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.26``
+
     ``$ go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.1``
