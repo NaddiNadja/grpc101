@@ -1,4 +1,20 @@
-# Setup of repository
+# gRPC 101
+
+## Prerequisites
+
+1. before starting, install Google's Protocol Buffers:
+    - go to this link: <https://developers.google.com/protocol-buffers/docs/downloads>
+    - Click on the "release page" link.
+    - find the version you need and download it.
+    - as per october 2021, if your on windows, it's the third from the bottom, ``protoc-3.18.1-win64.zip``.
+2. unzip the downloaded file somewhere "safe"
+    - on my windows machine, i placed it in ``C:\Program Files\Protoc``
+3. open a terminal and run these commands:
+
+    ``$ go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.26``
+    ``$ go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.1``
+
+## Setup of repository
 
 1. make ``go.mod`` file with:
 
