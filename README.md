@@ -63,7 +63,7 @@ if you haven't installed google's protocol buffers, see the prerequisites part a
 
 ## Prerequisites
 
-1. before starting, install google's Protocol Buffers:
+1. before starting, install google's protocol buffers:
     - go to this link: <https://developers.google.com/protocol-buffers/docs/downloads>
     - Click on the "release page" link.
     - find the version you need and download it.
