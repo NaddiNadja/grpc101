@@ -75,7 +75,8 @@ if you haven't installed google's protocol buffers, see the prerequisites part a
     - click the button "environment variables..." at the bottom.
     - in the bottom list select the variable called "path" and click "edit ..."
     - in the pop-up window, click "new..."
-    - paste the total path to the ``bin`` folder into the text field. 
+    - paste the total path to the ``bin`` folder into the text field.
+
         my path is ``C:\Program Files\Protoc\bin``.
     - click "ok".
 4. open a terminal and run these commands:
