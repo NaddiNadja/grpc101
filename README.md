@@ -13,6 +13,7 @@ if you haven't installed google's protocol buffers, see the prerequisites part a
     - notice line 3 and 4.
 
         ``package time;``
+
         ``option go_package = "https://github.itu.dk/nako/DISYS-week5;time";``
 
         the ``go_package`` should equal a link to your repo, a semicolon and then the package name.
