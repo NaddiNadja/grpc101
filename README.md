@@ -12,9 +12,10 @@ if you haven't installed google's protocol buffers, see the prerequisites part a
 2. make a ``.proto`` file in a subfolder, for example ``time/time.proto`` and fill it with IDL.
     - notice line 3 and 4.
 
-        ``package time;``
-
-        ``option go_package = "https://github.itu.dk/nako/DISYS-week5;time";``
+        ```Go
+        package time;
+        option go_package = "https://github.itu.dk/nako/DISYS-week5;time";
+        ```
 
         the ``go_package`` should equal a link to your repo, a semicolon and then the package name.
 3. run command:
