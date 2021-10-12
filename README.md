@@ -6,7 +6,7 @@ if you haven't installed google's protocol buffers, see the prerequisites part a
 
 1. make ``go.mod`` file with:
 
-    ``$ go mod init [link to repo]``
+    ``$ go mod init [link to repo without "https://"]``
 
     your repo should be on the public github. i couldn't get it to work on the itu instance.
 2. make a ``.proto`` file in a subfolder, for example ``time/time.proto``.
