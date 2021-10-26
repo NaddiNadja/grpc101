@@ -54,18 +54,18 @@ if you haven't installed google's protocol buffers, see the prerequisites part a
     > the only exception (i think) is changes to the ``client.go`` file, since it's run locally on your computer, but just connects to the server in docker.
 14. run command:
 
-    ``docker build -t test .``
+    ``$ docker build -t test --no-cache .``
 
-    to build the code.
+    to build the code. what you write after ``-t`` will be the name of your image, so the name of the image here is ``test``. the name doesn't matter, but it helps you identify it in the docker desktop app.
 15. run command:
 
-    ``docker run -p 9080:9080 -tid test``
+    ``$ docker run -p 9080:9080 -tid test``
 
-    to run the code in a docker container.
+    to run the code in a docker container. if you changed the name of the image from ``test``, make sure to change it in this command as well.
 16. change directory into your ``client`` folder.
 17. run command:
 
-    ``go run .``
+    ``$ go run .``
 
     to run the code.
 
