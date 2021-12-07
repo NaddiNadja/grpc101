@@ -9,7 +9,8 @@ if you haven't installed google's protocol buffers, see the prerequisites part a
     ``$ go mod init [link to repo without "https://"]``
 
     your repo should be on the public github. i couldn't get it to work on the itu instance.
-    > Tip! 
+    > **Tip!**
+    > 
     > You can use ``example.com``, if you don't have a repo.
 2. make a ``.proto`` file in a sub-directory, for example ``time/time.proto`` and fill it with IDL.
     - notice line 3 and 4.
@@ -20,7 +21,8 @@ if you haven't installed google's protocol buffers, see the prerequisites part a
         ```
 
         the ``go_package`` should equal a link to your repo, a semicolon and then the package name.
-        > Tip! 
+        > **Tip!**
+        > 
         > Notice the semicolon and the package-name at the end of the link. If you used example.com, you should write ``... = "https://example.com/;packagename";``.
 3. run command:
 
@@ -33,7 +35,8 @@ if you haven't installed google's protocol buffers, see the prerequisites part a
 
     to install dependencies and create the ``go.sum`` file.
 5. create a ``client\client.go`` file with the ``client_template.txt`` as template.
-    > Tip!
+    > **Tip!**
+    >
     > When implementing your grpc methods, you should write the link without "https://" and with the packagename at the end. If you used example.com, you should write ``"example.com/package"``.
 6. create a ``server\server.go`` file with the ``server_template.txt`` as template.
 7. switch out the "myPackage" with your actual package.
