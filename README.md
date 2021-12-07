@@ -37,7 +37,7 @@ if you haven't installed google's protocol buffers, see the prerequisites part a
 5. create a ``client\client.go`` file with the ``client_template.txt`` as template.
     > **Tip!**
     >
-    > When implementing your grpc methods, you should write the link without "https://" and with the packagename at the end. If you used example.com, you should write ``"example.com/package"``.
+    > When implementing your grpc methods, you should write the link without "https://" and with the packagename at the end. If you used example.com, you should write ``"example.com/package"``. If you used a long name for your package, you can write a shorter name before the quotation marks, for example ``pckg "example.com/longpackagename"``.
 6. create a ``server\server.go`` file with the ``server_template.txt`` as template.
 7. switch out the "myPackage" with your actual package.
 8. switch our the method names with actual method names.
